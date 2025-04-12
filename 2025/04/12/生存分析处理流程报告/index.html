@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Loria's blog | Loria's blog</title><meta name="author" content="Loria"><meta name="copyright" content="Loria"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="生存分析处理流程报告 一、引言 生存分析是一种统计方法，用于分析从某个起点到特定事件发生的时间。在电信行业中，这种分析可以用来预测客户流失、硬件故障或服务升级等事件。本报告将详细描述如何使用生存分析处理电信客户数据，以预测客户流失时间，并分析每一步处理的原因。 二、数据处理流程及原因分析 环境配置与路径设置 配置数据处理的环境，包括导入必要的库和设置数据库连接。 import os import">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Loria&#39;s blog">
+<meta property="og:url" content="http://scoups98.github.io/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="Loria&#39;s blog">
+<meta property="og:description" content="生存分析处理流程报告 一、引言 生存分析是一种统计方法，用于分析从某个起点到特定事件发生的时间。在电信行业中，这种分析可以用来预测客户流失、硬件故障或服务升级等事件。本报告将详细描述如何使用生存分析处理电信客户数据，以预测客户流失时间，并分析每一步处理的原因。 二、数据处理流程及原因分析 环境配置与路径设置 配置数据处理的环境，包括导入必要的库和设置数据库连接。 import os import">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://scoups98.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2025-04-12T06:40:58.229Z">
+<meta property="article:modified_time" content="2025-04-12T06:40:56.000Z">
+<meta property="article:author" content="Loria">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://scoups98.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "url": "http://scoups98.github.io/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/",
+  "image": "http://scoups98.github.io/img/butterfly-icon.png",
+  "datePublished": "2025-04-12T06:40:58.229Z",
+  "dateModified": "2025-04-12T06:40:56.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Loria",
+      "url": "http://scoups98.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://scoups98.github.io/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Loria\'s blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Loria's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Loria's blog</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Untitled</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-04-12T06:40:58.229Z" title="Created 2025-04-12 14:40:58">2025-04-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-04-12T06:40:56.000Z" title="Updated 2025-04-12 14:40:56">2025-04-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><strong>生存分析处理流程报告</strong></p>
+<p><strong>一、引言</strong></p>
+<p>生存分析是一种统计方法，用于分析从某个起点到特定事件发生的时间。在电信行业中，这种分析可以用来预测客户流失、硬件故障或服务升级等事件。本报告将详细描述如何使用生存分析处理电信客户数据，以预测客户流失时间，并分析每一步处理的原因。</p>
+<p><strong>二、数据处理流程及原因分析</strong></p>
+<p><strong>环境配置与路径设置</strong></p>
+<p>配置数据处理的环境，包括导入必要的库和设置数据库连接。</p>
+<p>import os</p>
+<p>import getpass</p>
+<p>from pyspark.sql.types import StructType, StructField, StringType, DoubleType</p>
+<p>from pyspark.sql import SparkSession</p>
+<p>from pyspark.sql.functions import when, col</p>
+<p>import pandas as pd</p>
+<p>import shutil</p>
+<p># 获取当前用户名（替代dbutils方法）</p>
+<p>user &#x3D; getpass.getuser()  # 获取系统用户名</p>
+<p>username_sql &#x3D; user.replace(“.”, “_“)  # 将用户名中的点替换为下划线，适配SQL语法</p>
+<p># 设置路径（使用本地路径而非DBFS路径）</p>
+<p>database_name &#x3D; f’dm_ibm_telco_churn_{username_sql}’  # 生成数据库名称</p>
+<p># 使用项目相对路径（建议存放在项目目录下）</p>
+<p>project_root &#x3D; os.path.abspath(os.path.join(os.getcwd(), “..”))  # 获取项目根目录（当前目录的上级目录）</p>
+<p>data_path &#x3D; os.path.join(project_root, ‘ibm-telco-churn’)  # 定义数据存储的根路径</p>
+<p># 创建必要的目录结构</p>
+<p>os.makedirs(data_path, exist_ok&#x3D;True)  # 创建数据根目录</p>
+<p>os.makedirs(os.path.join(data_path, ‘bronze’), exist_ok&#x3D;True)  # 创建青铜层目录</p>
+<p>os.makedirs(os.path.join(data_path, ‘silver’), exist_ok&#x3D;True)  # 创建白银层目录</p>
+<p># 定义完整文件路径</p>
+<p>driver_to_dbfs_path &#x3D; os.path.join(data_path, ‘Telco-Customer-Churn.csv’)  # 定义数据文件路径</p>
+<p>bronze_tbl_path &#x3D; os.path.join(data_path, ‘bronze’)  # 定义青铜层路径</p>
+<p>silver_tbl_path &#x3D; os.path.join(data_path, ‘silver’)  # 定义白银层路径</p>
+<p># 表名保持不变</p>
+<p>bronze_tbl_name &#x3D; ‘bronze_customers’  # 青铜表名</p>
+<p>silver_tbl_name &#x3D; ‘silver_monthly_customers’  # 白银表名</p>
+<p># 打印验证配置</p>
+<p>print(“配置验证：”)</p>
+<p>print(f”用户名: {user}”)</p>
+<p>print(f”SQL安全用户名: {username_sql}”)</p>
+<p>print(f”数据库名: {database_name}”)</p>
+<p>print(f”数据根目录: {data_path}”)</p>
+<p>print(f”原始数据文件: {driver_to_dbfs_path}”)</p>
+<p>print(f”Bronze层路径: {bronze_tbl_path}”)</p>
+<p>print(f”Silver层路径: {silver_tbl_path}”)</p>
+<p>print(f”Bronze表名: {bronze_tbl_name}”)</p>
+<p>print(f”Silver表名: {silver_tbl_name}”)</p>
+<p>`&#96;&#96;</p>
+<p>为了使用PySpark进行数据处理，需要导入相关的库。通过<code>getpass.getuser()</code>获取系统用户名，确保数据库名称的唯一性和安全性。定义本地路径，确保数据处理的本地化和可移植性。之后创建必要的目录结构，确保数据的组织和存储清晰有序。</p>
+<p><strong>定义数据结构</strong></p>
+<p>定义数据结构，确保数据的正确加载和处理。</p>
+<p># Define schema</p>
+<p>schema &#x3D; StructType([</p>
+<p><code>    </code>StructField(‘customerID’, StringType()),  # 客户ID，字符串类型</p>
+<p><code>    </code>StructField(‘gender’, StringType()),      # 性别，字符串类型</p>
+<p><code>    </code>StructField(‘seniorCitizen’, DoubleType()),  # 是否为老年公民，双精度浮点类型（0或1）</p>
+<p><code>    </code>StructField(‘partner’, StringType()),     # 是否有配偶，字符串类型</p>
+<p><code>    </code>StructField(‘dependents’, StringType()),  # 是否有家属，字符串类型</p>
+<p><code>    </code>StructField(‘tenure’, DoubleType()),      # 在网时长，双精度浮点类型</p>
+<p><code>    </code>StructField(‘phoneService’, StringType()),  # 是否有电话服务，字符串类型</p>
+<p><code>    </code>StructField(‘multipleLines’, StringType()),  # 是否有多条线路，字符串类型</p>
+<p><code>    </code>StructField(‘internetService’, StringType()),  # 互联网服务类型，字符串类型</p>
+<p><code>    </code>StructField(‘onlineSecurity’, StringType()),  # 在线安全服务，字符串类型</p>
+<p><code>    </code>StructField(‘onlineBackup’, StringType()),  # 在线备份服务，字符串类型</p>
+<p><code>    </code>StructField(‘deviceProtection’, StringType()),  # 设备保护服务，字符串类型</p>
+<p><code>    </code>StructField(‘techSupport’, StringType()),  # 技术支持服务，字符串类型</p>
+<p><code>    </code>StructField(‘streamingTV’, StringType()),  # 是否有流媒体电视服务，字符串类型</p>
+<p><code>    </code>StructField(‘streamingMovies’, StringType()),  # 是否有流媒体电影服务，字符串类型</p>
+<p><code>    </code>StructField(‘contract’, StringType()),  # 合同类型，字符串类型</p>
+<p><code>    </code>StructField(‘paperlessBilling’, StringType()),  # 是否为无纸账单，字符串类型</p>
+<p><code>    </code>StructField(‘paymentMethod’, StringType()),  # 支付方式，字符串类型</p>
+<p><code>    </code>StructField(‘monthlyCharges’, DoubleType()),  # 每月费用，双精度浮点类型</p>
+<p><code>    </code>StructField(‘totalCharges’, DoubleType()),  # 总费用，双精度浮点类型</p>
+<p><code>    </code>StructField(‘churnString’, StringType())  # 是否流失（字符串形式），字符串类型</p>
+<p>])</p>
+<p>通过定义数据结构，可以确保数据的正确加载和处理，避免数据类型不匹配的问题。</p>
+<p><strong>创建SparkSession</strong></p>
+<p>创建SparkSession，用于后续的数据处理。</p>
+<p># 创建SparkSession</p>
+<p>spark &#x3D; SparkSession.builder.appName(“TelcoCustomerChurn”).getOrCreate()</p>
+<p>SparkSession是PySpark的入口点，用于创建和操作DataFrame，是数据处理的基础。</p>
+<p><strong>数据加载与显示</strong>：</p>
+<p>从本地文件系统加载数据，并显示数据的前几行。</p>
+<p># 文件路径（假设文件已在本地Jupyter环境）</p>
+<p>local_file_path &#x3D; “Telco-Customer-Churn.csv”  # 确保文件在Jupyter的工作目录中</p>
+<p># 读取数据</p>
+<p>bronze_df &#x3D; spark.read.format(‘csv’).schema(schema).option(‘header’, ‘true’).load(local_file_path)</p>
+<p># 显示数据</p>
+<p>bronze_df.show(5)</p>
+<p>从本地文件系统加载数据，确保数据的可用性。显示数据的前几行，验证数据是否正确加载。</p>
+<p><strong>数据清洗与转换</strong></p>
+<p>对原始数据集进行清洗和转换，以便进行生存分析。</p>
+<p># 构建白银表</p>
+<p>silver_df &#x3D; bronze_df.withColumn(‘churn’, when(col(‘churnString’) &#x3D;&#x3D; ‘Yes’, 1)</p>
+<p><code>                                           </code>.when(col(‘churnString’) &#x3D;&#x3D; ‘No’, 0)</p>
+<p><code>                                           </code>.otherwise(‘Unknown’)) \</p>
+<p><code>                     </code>.drop(‘churnString’) \</p>
+<p><code>                     </code>.filter(col(‘contract’) &#x3D;&#x3D; ‘Month-to-month’) \</p>
+<p><code>                     </code>.filter(col(‘internetService’) !&#x3D; ‘No’)</p>
+<p># 查看白银表数据（可选）</p>
+<p>silver_df.show(5)</p>
+<p>将“churn”列转换为数值类型（0或1），简化后续的分析过程。过滤出订阅月对月合同且互联网服务不为“否”的客户，提高分析的针对性。</p>
+<p><strong>创建数据库</strong></p>
+<p>创建数据库，用于存储清洗后的数据。</p>
+<p># 设置数据库名称</p>
+<p>database_name &#x3D; “telco_db”  # 替换为你想要的数据库名称</p>
+<p># 删除已存在的数据库（如果存在）</p>
+<p>spark.sql(f’DROP DATABASE IF EXISTS {database_name} CASCADE’)</p>
+<p># 创建新数据库</p>
+<p>spark.sql(f’CREATE DATABASE {database_name}’)</p>
+<p># 使用该数据库</p>
+<p>spark.sql(f’USE {database_name}’)</p>
+<p>print(f”数据库 {database_name} 创建并设置成功!”)</p>
+<p>创建数据库对数据进行组织和管理，确保数据的结构化存储。如果存在旧的数据库，先删除它，以避免数据冲突。</p>
+<p><strong>数据写入本地文件系统</strong></p>
+<p>将清洗后的数据写入本地文件系统。</p>
+<p># 定义输出路径（替换为你的本地路径）</p>
+<p>bronze_output_path &#x3D; “.&#x2F;data&#x2F;bronze&#x2F;Telco-Customer-Churn.csv”</p>
+<p>silver_output_path &#x3D; “.&#x2F;data&#x2F;silver&#x2F;Telco-Customer-Churn-processed.csv”</p>
+<p># 删除旧数据（如果存在）</p>
+<p>shutil.rmtree(os.path.dirname(bronze_output_path), ignore_errors&#x3D;True)</p>
+<p>shutil.rmtree(os.path.dirname(silver_output_path), ignore_errors&#x3D;True)</p>
+<p># 创建输出目录（如果不存在）</p>
+<p>os.makedirs(os.path.dirname(bronze_output_path), exist_ok&#x3D;True)</p>
+<p>os.makedirs(os.path.dirname(silver_output_path), exist_ok&#x3D;True)</p>
+<p># 使用 Spark 直接写入 CSV（避免转 Pandas，更高效）</p>
+<p>bronze_df.write.csv(bronze_output_path, header&#x3D;True, mode&#x3D;”overwrite”)</p>
+<p>silver_df.write.csv(silver_output_path, header&#x3D;True, mode&#x3D;”overwrite”)</p>
+<p>print(f”数据已保存为CSV格式:\nBronze层: {bronze_output_path}\nSilver层: {silver_output_path}”)</p>
+<p>将数据保存为CSV格式，便于后续的分析和报告生成。使用<code>mode(&quot;overwrite&quot;)</code>确保每次运行脚本时，数据都能被正确更新。</p>
+<p><strong>创建表</strong></p>
+<p>创建指向数据的表，以便于查询。</p>
+<p># 创建Bronze表（使用已定义的schema）</p>
+<p>bronze_df.write.format(“csv”) \</p>
+<p><code>    </code>.option(“header”, “true”) \</p>
+<p><code>    </code>.mode(“overwrite”) \</p>
+<p><code>   </code>.saveAsTable(f”{database_name}.{bronze_tbl_name}”)</p>
+<p># 创建Silver表（使用已定义的schema）</p>
+<p>silver_df.write.format(“csv”) \</p>
+<p><code>    </code>.option(“header”, “true”) \</p>
+<p><code>    </code>.mode(“overwrite”) \</p>
+<p><code>    </code>.saveAsTable(f”{database_name}.{silver_tbl_name}”)</p>
+<p># 验证表创建</p>
+<p>print(“已创建表：”)</p>
+<p>spark.sql(f”SHOW TABLES IN {database_name}”).show()</p>
+<p># 验证数据可查询</p>
+<p>print(“\nBronze表数据示例：”)</p>
+<p>spark.sql(f”SELECT * FROM {database_name}.{bronze_tbl_name} LIMIT 5”).show()</p>
+<p>print(“\nSilver表数据示例：”)</p>
+<p>spark.sql(f”SELECT * FROM {database_name}.{silver_tbl_name} LIMIT 5”).show()</p>
+<p>通过创建表将数据结构化，便于在SQL查询中使用。接下来验证表是否成功创建，确保数据的可访问性。</p>
+<p><strong>三、流程图</strong></p>
+<p><img src="/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A.001.png"></p>
+<p><strong>四、总结</strong></p>
+<p>通过上述步骤，我们成功地配置了数据处理环境，下载并加载了数据，进行了数据清洗和转换，创建了数据库和表，并将数据写入了本地文件系统。这些步骤为后续的生存分析奠定了基础，使我们能够预测客户流失时间，从而帮助电信公司制定更有效的客户保留策略。</p>
+<p><strong>关键</strong>：</p>
+<ol>
+<li>数据清洗和转换是确保分析准确性的关键步骤。</li>
+<li>Kaplan-Meier估计和Cox比例风险模型是生存分析的核心方法。</li>
+<li>模型评估和验证确保了分析结果的可靠性和可重复性。</li>
+<li>生存分析的结果可以为实际问题的决策提供有力支持。</li>
+</ol>
+<p>通过这些步骤，可以确保数据处理的透明度和可重复性，为生存分析提供高质量的数据支持。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://Scoups98.github.io">Loria</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://scoups98.github.io/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/">http://scoups98.github.io/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2023/01/01/Thrombus%20analysis/" title="深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析</div></div><div class="info-2"><div class="info-item-1">摘要目的探讨新型冠状病毒疫情（COVID-19）对深圳市人群血栓发病率的影响，分析疫情期间血栓性疾病的流行病学特征，并预测长期发病率趋势。方法收集北京大学深圳医院急诊科2017年1月至2024年6月就诊的血栓患者数据，采用R4.3.1进行统计分析。结果疫情前（2017年1月-2019年12月）血栓患者115例，男女比约为0.89：1；疫情流行期间（2020年1月-2022年12月）血栓患者190例，男女比例约为1.24：1；疫情流行后至今（2023年1月-2024年6月）血栓患者67例，男女比例约为0.91：1；其中以31~60岁年龄组患者数量最多（分别为51.30%，45.79%，44.78%）。血栓疾病的发生类型主要为静脉血栓（90.32%）。结论COVID-19疫情显著提高了血栓疾病的发病率，但随着疫苗普及和疫情控制，人群血栓发病率逐渐恢复至疫情前水平。 关键词：血栓；新冠；流行病学特征；发病率 AbstractObjectiveTo explore the impact of COVID-19 on the incidence of thrombosis in...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Loria</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/" title="Untitled">Untitled</a><time datetime="2025-04-12T06:40:58.229Z" title="Created 2025-04-12 14:40:58">2025-04-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/01/Thrombus%20analysis/" title="深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析">深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析</a><time datetime="2022-12-31T16:00:00.000Z" title="Created 2023-01-01 00:00:00">2023-01-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Loria</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

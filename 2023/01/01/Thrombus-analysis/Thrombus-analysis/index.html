@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析 | Loria's blog</title><meta name="author" content="Loria"><meta name="copyright" content="Loria"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="摘要目的探讨新型冠状病毒疫情（COVID-19）对深圳市人群血栓发病率的影响，分析疫情期间血栓性疾病的流行病学特征，并预测长期发病率趋势。方法收集北京大学深圳医院急诊科2017年1月至2024年6月就诊的血栓患者数据，采用R4.3.1进行统计分析。结果疫情前（2017年1月-2019年12月）血栓患者115例，男女比约为0.89：1；疫情流行期间（2020年1月-2022年12月）血栓患者190例">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析">
+<meta property="og:url" content="http://scoups98.github.io/2023/01/01/Thrombus-analysis/Thrombus-analysis/index.html">
+<meta property="og:site_name" content="Loria&#39;s blog">
+<meta property="og:description" content="摘要目的探讨新型冠状病毒疫情（COVID-19）对深圳市人群血栓发病率的影响，分析疫情期间血栓性疾病的流行病学特征，并预测长期发病率趋势。方法收集北京大学深圳医院急诊科2017年1月至2024年6月就诊的血栓患者数据，采用R4.3.1进行统计分析。结果疫情前（2017年1月-2019年12月）血栓患者115例，男女比约为0.89：1；疫情流行期间（2020年1月-2022年12月）血栓患者190例">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://scoups98.github.io/img/butterfly-icon.png">
+<meta property="article:published_time" content="2022-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-04-12T10:28:01.567Z">
+<meta property="article:author" content="Loria">
+<meta property="article:tag" content="血栓">
+<meta property="article:tag" content="新冠">
+<meta property="article:tag" content="流行病学特征">
+<meta property="article:tag" content="发病率">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://scoups98.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析",
+  "url": "http://scoups98.github.io/2023/01/01/Thrombus-analysis/Thrombus-analysis/",
+  "image": "http://scoups98.github.io/img/butterfly-icon.png",
+  "datePublished": "2022-12-31T16:00:00.000Z",
+  "dateModified": "2025-04-12T10:28:01.567Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Loria",
+      "url": "http://scoups98.github.io/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://scoups98.github.io/2023/01/01/Thrombus-analysis/Thrombus-analysis/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/images/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/text2sql.html"><span> Text-to-SQL Demo</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Loria's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/text2sql.html"><span> Text-to-SQL Demo</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-12-31T16:00:00.000Z" title="Created 2023-01-01 00:00:00">2023-01-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-04-12T10:28:01.567Z" title="Updated 2025-04-12 18:28:01">2025-04-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8C%BB%E5%AD%A6%E7%A0%94%E7%A9%B6/">医学研究</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p><strong>目的</strong><br>探讨新型冠状病毒疫情（COVID-19）对深圳市人群血栓发病率的影响，分析疫情期间血栓性疾病的流行病学特征，并预测长期发病率趋势。<br><strong>方法</strong><br>收集北京大学深圳医院急诊科2017年1月至2024年6月就诊的血栓患者数据，采用R4.3.1进行统计分析。<br><strong>结果</strong><br>疫情前（2017年1月-2019年12月）血栓患者115例，男女比约为0.89：1；疫情流行期间（2020年1月-2022年12月）血栓患者190例，男女比例约为1.24：1；疫情流行后至今（2023年1月-2024年6月）血栓患者67例，男女比例约为0.91：1；其中以31~60岁年龄组患者数量最多（分别为51.30%，45.79%，44.78%）。血栓疾病的发生类型主要为静脉血栓（90.32%）。<br><strong>结论</strong><br>COVID-19疫情显著提高了血栓疾病的发病率，但随着疫苗普及和疫情控制，人群血栓发病率逐渐恢复至疫情前水平。</p>
+<p><strong>关键词</strong>：血栓；新冠；流行病学特征；发病率</p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>Objective</strong><br>To explore the impact of COVID-19 on the incidence of thrombosis in Shenzhen, analyze the epidemiological characteristics of thrombotic diseases during the epidemic period, and predict the long-term incidence trend.<br><strong>Methods</strong><br>The data of thrombus patients in the emergency Department of Peking University Shenzhen Hospital from January 2017 to June 2024 were collected. R4.3.1 was used for statistical analysis.<br><strong>Results</strong><br>There were 115 patients with thrombus before the epidemic(January 2017 to December 2019), the male to female ratio was about 0.89:1. During the epidemic period(January 2020-Decenmber 2022), 190 patients with thrombosis were diagnosed, with a male&#x2F;female ratio of 1.23:1. Since the epidemic(January 2023 to June 2024), 67 patients with thrombosis, the ratio of male to female is about 0.91:1. The number of patients in the 31~60 age group was the largest(51.30%,45.79%,44.78%, respectively). The main type of thrombotic disease was venous thrombosis (90.32%).<br><strong>Conclusion</strong><br>The COVID-19 epidemic significantly increased the incidence of thrombotic diseases, but with the popularization of vaccines and epidemic control, the incidence of thrombotic patients gradually recovered to the pre-epidemic level.</p>
+<p><strong>Keywords</strong>: thrombosis; COVID-19; Epidemiological characteristic; incidence rate</p>
+<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在新型冠状病毒（COVID-19）疫情背景下，已有研究揭示冠状病毒可能引起血管内皮损伤，进而增加血栓性疾病的发病率。血栓性疾病作为临床上常见且严重的病症，对于其流行病学特征的研究对于制定防控策略具有重要意义。本研究旨在通过分析2017年1月至2024年6月期间深圳市北京大学深圳医院急诊科就诊的血栓患者数据，探讨新冠疫情对血栓疾病发病率的影响，并预测其长期趋势。</p>
+<h2 id="资料与方法"><a href="#资料与方法" class="headerlink" title="资料与方法"></a>资料与方法</h2><h3 id="1-资料来源"><a href="#1-资料来源" class="headerlink" title="1. 资料来源"></a>1. 资料来源</h3><p>本研究的数据来源于深圳市北京大学深圳医院2017年1月至2024年6月急诊科就诊的血栓患者。</p>
+<h3 id="2-资料收集方法"><a href="#2-资料收集方法" class="headerlink" title="2. 资料收集方法"></a>2. 资料收集方法</h3><p>通过北大深圳医院数据库系统收集疫情前（2017-2019年）、疫情中（2020-2022年）、疫情后（2023-2024年6月）的血栓患者数据，包括姓名、性别、年龄、诊断时间、诊断名称。<br>关于研究指标的定义：  </p>
+<ol>
+<li>患者的诊断为医师根据主要病情诊断。  </li>
+<li>仅研究静脉血栓患者及除脑动脉、冠状动脉的其它动脉血栓及微循环血栓患者。考虑到脑动脉、冠状动脉血栓形成主要与高血压、冠状动脉粥样硬化、糖尿病等所致的血管病变有关，本次研究暂不包括此类患者人群。</li>
+</ol>
+<h3 id="3-统计学分析"><a href="#3-统计学分析" class="headerlink" title="3. 统计学分析"></a>3. 统计学分析</h3><p>采用R4.3.1进行统计分析。计数资料采用构成比进行统计描述，疫情前与疫情中比较、疫情前与疫情后比较，采用χ²检验和Fisher确切概率法检验，两次比较，多重检验校正检验水准为α&#x3D;0.025（双侧）。</p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><h3 id="1-患者一般情况"><a href="#1-患者一般情况" class="headerlink" title="1. 患者一般情况"></a>1. 患者一般情况</h3><p>2019年12月8日，首例不明原因肺炎患者发病。2020年1月至2022年12月为我国新冠疫情流行期，所有在此期间进入急诊科的血栓患者作为疫情组，选择2017年1月至2019年12月为疫情前组，2023年1月至2024年7月期间进入急诊科的血栓患者作为疫情后组。</p>
+<p>据统计，疫情前组就诊血栓患者人数为115人，血栓患者人数在同期就诊患者人数中所占比例为0.0160%，其中男性54例（占46.96%），女性61例（占53.04%），31~60岁年龄组病例数最高，占患者总数的51.30%，见表1。</p>
+<p>疫情组共计190例血栓患者，占同期急诊患者人数的0.0393%，其中男性105例（占55.26%），女性85例（占44.74%），31~60岁年龄组病例数最高，占患者总数的45.79%，见表1。</p>
+<p>疫情后组就诊血栓患者67人，占同期急诊患者人数的0.0141%，其中男性32例（占47.76%），女性35例（占52.24%），31~60岁年龄组病例数最高，占患者总数的44.78%，见表1。</p>
+<p><strong>表1</strong>：疫情前、中、后北京大学深圳医院急诊科就诊血栓患者人口学特征分布  </p>
+<table>
+<thead>
+<tr>
+<th>人口学特征</th>
+<th>疫情前</th>
+<th>疫情中</th>
+<th>疫情后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>年龄组（岁）</td>
+<td>例数（构成比%）</td>
+<td>例数（构成比%）</td>
+<td>例数（构成比%）</td>
+</tr>
+<tr>
+<td>&lt;30</td>
+<td>4 (3.48)</td>
+<td>21 (11.05)</td>
+<td>7 (10.45)</td>
+</tr>
+<tr>
+<td>31~60</td>
+<td>59 (51.30)</td>
+<td>87 (45.79)</td>
+<td>30 (44.78)</td>
+</tr>
+<tr>
+<td>61~90</td>
+<td>43 (37.39)</td>
+<td>80 (42.11)</td>
+<td>29 (43.28)</td>
+</tr>
+<tr>
+<td>&gt;90</td>
+<td>9 (7.83)</td>
+<td>2 (1.05)</td>
+<td>1 (1.49)</td>
+</tr>
+<tr>
+<td>性别</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>男</td>
+<td>54 (46.96)</td>
+<td>105 (55.26)</td>
+<td>32 (47.76)</td>
+</tr>
+<tr>
+<td>女</td>
+<td>61 (53.04)</td>
+<td>85 (44.74)</td>
+<td>35 (52.24)</td>
+</tr>
+</tbody></table>
+<h3 id="2-血栓性疾病发病情况"><a href="#2-血栓性疾病发病情况" class="headerlink" title="2. 血栓性疾病发病情况"></a>2. 血栓性疾病发病情况</h3><p>血栓类型主要为静脉血栓（占90.32%）。不同年龄组间血栓类型不同（χ²&#x3D;3.0349，P&#x3D;0.3863），不同性别间血栓类型不同（χ²&#x3D;1.9856，P&#x3D;0.1588），男性静脉血栓类型占87.96%，女性则为92.82%；男性除脑动脉血栓形成、冠状动脉血栓形成外的其它部位的动脉血栓和微循环血栓类型占12.04%，女性则为7.18%。见表2。</p>
+<p><strong>表2</strong>：北京大学深圳医院急诊科就诊的血栓类型（n,%）  </p>
+<table>
+<thead>
+<tr>
+<th>疾病类型</th>
+<th>年龄组（岁）</th>
+<th>性别</th>
+<th>合计</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>&lt;30</td>
+<td>31~60</td>
+<td>61~90</td>
+</tr>
+<tr>
+<td>静脉系统血栓</td>
+<td>31(96.88)</td>
+<td>156(88.64)</td>
+<td>139(91.45)</td>
+</tr>
+<tr>
+<td>其他动脉血栓和微循环血栓</td>
+<td>1(3.12)</td>
+<td>20(11.36)</td>
+<td>13(8.55)</td>
+</tr>
+</tbody></table>
+<h3 id="3-数据处理"><a href="#3-数据处理" class="headerlink" title="3. 数据处理"></a>3. 数据处理</h3><p>对于血栓患者人数随时间的变化，将疫情前与疫情中比较，采用Fisher确切概率法检验，得到p值为1.372*10^-15（p值小于0.025），表明疫情对血栓疾病造成显著影响。比较疫情前与疫情后，得到p值为0.8054（p值大于0.025），即疫情前后，血栓患者人数无显著性差异。北深医院的统计数据表明，血栓患者人数在同期就诊患者总人数中所占比例可以推测深圳市人群血栓疾病的发病率，从而间接反映了整体血栓疾病的发病情况。比较疫情前与疫情期间的静脉血栓患者人数与除脑动脉血栓形成、冠状动脉血栓形成外的其它部位的动脉血栓和微循环血栓，同理得到p值为0.284（大于0.025），表明新冠疫情对静脉系统血栓疾病的影响与对除脑动脉血栓形成和冠状动脉血栓形成以外的其他部位动脉血栓及微循环血栓的影响无显著差异。</p>
+<p>其次，对血栓患者人数进行半年为单位的统计，以条形图呈现血栓患者人数-时间、静脉血栓患者人数-时间、除脑动脉血栓形成、冠状动脉血栓形成外的其它部位的动脉血栓和微循环血栓患者人数-时间的趋势，以折线图呈现血栓患者人数在同期就诊患者总人数中所占比例-时间的趋势与血栓疾病中静脉血栓和除脑动脉血栓形成、冠状动脉血栓形成外的其它部位的动脉血栓和微循环血栓所占比例-时间的趋势（见图1）。<br><img src="/images/1.png" alt="图1:17年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图a"><br>图1:17年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图a<br><img src="/images/2.png" alt="图1:17 年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图b"><br>图1:17年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图b<br><img src="/images/3.png" alt="图1:17 年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图c"><br>图1:17年上半年至 24 年下半年北深医院急诊科血栓患者在血栓患者总人数中所占比例-时间、血栓患者人数-时间图c</p>
+<h3 id="4-研究对象血栓疾病发病率比较"><a href="#4-研究对象血栓疾病发病率比较" class="headerlink" title="4. 研究对象血栓疾病发病率比较"></a>4. 研究对象血栓疾病发病率比较</h3><p>计算得出2020年1月至2022年12月疫情期间就诊患者中，血栓患者人数在同期就诊患者总人数中所占比例约为0.0405%；计算得到2017年1月至2019年12月疫情前就诊患者中，血栓患者人数在同期就诊患者人数中所占比例为0.0160%，2023年1月至2024年6月疫情后就诊患者中，血栓患者人数在同期就诊患者人数中所占比例约为0.0201%，非疫情期间总的血栓患者人数在同期就诊患者人数中所占比例约为0.0173%。对比两个非疫情时期血栓患者人数在同期就诊患者人数中所占比例，计算得到p值为0.1653，大于0.05，表明0.0160%与0.0201%之间的差异不具有统计学显著性。而在对比疫情流行时期与非疫情流行时期血栓患者人数在同期就诊患者人数中所占比例时，计算得到p值小于2.2*10^-16，表明该比例存在显著性差异（p &lt; 0.01），由此可见在单边检验中，疫情期间血栓患者人数在同期就诊患者人数中所占比例显著上升。</p>
+<h3 id="5-图像数据信息分析结论"><a href="#5-图像数据信息分析结论" class="headerlink" title="5. 图像数据信息分析结论"></a>5. 图像数据信息分析结论</h3><p>图1显示，在非新冠病毒流行时期（2017年1月至2020年1月及2023年7月至2024年7月），北京大学深圳医院急诊科血栓患者的发病率基本保持稳定。自疫情爆发以来，血栓患者人数逐渐上升，并在2022年下半年达到峰值。2022年之后，血栓患者人数逐步减少，并在疫情得到控制后回落至疫情前的基线水平。</p>
+<h2 id="讨论"><a href="#讨论" class="headerlink" title="讨论"></a>讨论</h2><p>对图1（a）中血栓患者人数峰值出现的原因进行探讨：首先，新冠疫情在2021年至2022年期间全面爆发并持续蔓延，与此对应的是2021年上半年至2022年下半年血栓患者人数的上升，合理推测新冠病毒可能导致了血栓疾病发病率的增加。其次，考虑到疫苗接种因素：自2020年12月15日我国启动重点人群新冠疫苗接种以来，血栓患者人数的增长速度在2022年上半年开始减缓，并于2022年下半年逐渐减少。至2023年下半年，新冠疫情基本得到控制，血栓患者人数稳定于疫情前的基线水平。</p>
+<p>新冠病毒对血栓疾病发病率有显著影响，提高了血栓疾病的发病率，在疫苗发挥作用、疫情得到控制之后，血栓疾病患者发病率重新稳定在基准值。血栓疾病新冠病毒对血栓疾病的影响主要表现在以下几方面。第一，内皮细胞损伤：SARS⁃CoV⁃2 通过直接侵袭内皮细胞，从而引起血管内皮损伤及促炎细胞因子释放，其刺突蛋白可激活替代补体途径［1，10］。其中 SARS⁃CoV⁃2对血管内皮细胞造成的损伤能够广泛引起炎症反应和凝血功能异常，同时可能导致肺、心脏、大脑、肾脏、下肢静脉及皮肤等部位病变甚至功能障碍。这既是造成人体多脏器功能损伤的重要机制，也是大幅增高新冠感染患者发生VTE风险的主要原因［4］。第二，血液高凝：由于血管内导管或重症感染等因素所引起的急性炎症反应介质释放，进而通过多种途径影响凝血和纤溶系统，伴有蛋白C和抗凝血酶⁃Ⅲ（AT⁃Ⅲ）水平下降、纤溶酶原激活物抑制剂⁃I（PAI⁃1）水平的上调、凝血因子Ⅷ升高、纤维蛋白原升高、NET 等因素，最终导致凝血级联反应的活化和纤溶系统的抑制，使血液处于高凝状态，并进一步促进 VTE 的发生［5，8］。第三，血液淤滞：新冠感染患者可能因发热、腹泻、纳差等症状引起失水而出现液体容量不足，或因卧床、肥胖、休克、昏迷等原因导致血液淤滞，也为静脉血栓的形成及VTE 的发生进一步创造了条件［2，6］。</p>
+<p>新型冠状病毒疫情（COVID-19）期间，血栓患者人数出现显著增长, 发生静脉、动脉和微血管血栓形成风险显著增加[3,7,9]，引起了全球医学界的广泛关注。通过对新冠疾病流行期间和非新冠疾病流行期间一家大型三级甲等综合性医院急诊室共372例血栓患者流行病学特征，及疫情前后、疫情期间血栓患者人数在同期就诊患者人数中所占比例数据分析发现，疫情前后，血栓疾病患者女性多于男性，男女比分别为0.89：1、0.91：1。疫情期间血栓患者男性多于女性，男女比例为1.24：1。血栓疾病在31~60岁年龄组患者数量最多（分别为51.30%，45.79%，44.78%）。血栓疾病的发生类型主要为静脉血栓（90.32%）。根据本次研究结果，有理由认为新冠病毒可造成血栓疾病发病率显著上升，新冠疫情结束后，血栓患者人数在同期就诊患者人数中所占比例趋于稳定，推测人群中血栓疾病长期发病率将会稳定在基线值附近。</p>
+<p>综上，通过对北京大学深圳医院急诊科就诊的血栓患者人群的调查和分析，对深圳市普通人群长期发病率做出初步预测，有理由认为新冠病毒不会造成人群中血栓疾病长期发病率增高。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li>Albani F, Sepe L, Fusina F, et al. Thromboprophylaxis with enoxaparin is associated with a lower death rate in patients hospitalized with SARS-CoV-2 infection. A cohort study. EClinicalMedicine, 2020, 27:100562.  </li>
+<li>Begbie M, Notley C, Tinlin S, et al. The Factor VIII acute phase response requires the participation of NFkappaB and C&#x2F;EBP. Thromb Haemost, 2000, 84(2):216-222.  </li>
+<li>Connors JM, Levy JH. COVID-19 and its implications for thrombosis and anticoagulation. Blood, 2020, 135(23):2033-2040.  </li>
+<li>Conway EM, Mackman N, Warren RQ, et al. Understanding COVID-19-associated coagulopathy. Nat Rev Immunol, 2022, 22(10):639-649.  </li>
+<li>Heit JA, Silverstein MD, Mohr DN, et al. The epidemiology of venous thromboembolism in the community. Thromb Haemost, 2001, 86(1):452-463.  </li>
+<li>Manne BK, Denorme F, Middleton EA, et al. Platelet gene expression and function in patients with COVID-19. Blood, 2020, 136(11):1317-1329.  </li>
+<li>Mcfadyen JD, Stevens H, Peter K. The emerging threat of (micro)thrombosis in COVID-19 and its therapeutic implications. Circ Res, 2020, 127(4):571-587.  </li>
+<li>Shaik, A., Chen, Q., Mar, P., Kim, H., Mejia, P., Pacheco, H., Goonewardena, SN, Cho, DJ, &amp; Rosenson, RS (2022). High blood viscosity in acute and recent COVID-19 infections. Clinical hemorheology and microcirculation, 82(2), 149-155.  </li>
+<li>Walls AC, Park YJ, Tortorici MA, et al. Structure, function, and antigenicity of the SARS-CoV-2 spike glycoprotein. Cell, 2020, 181(2):281-292.  </li>
+<li>Zhai Z, Li C, Chen Y, et al. Prevention and Treatment of Venous Thromboembolism Associated with Coronavirus Disease 2019 Infection: A Consensus Statement before Guidelines. Thromb Haemost, 2020, 120(6):937-948.</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://Scoups98.github.io">Loria</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://scoups98.github.io/2023/01/01/Thrombus-analysis/Thrombus-analysis/">http://scoups98.github.io/2023/01/01/Thrombus-analysis/Thrombus-analysis/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%A1%80%E6%A0%93/">血栓</a><a class="post-meta__tags" href="/tags/%E6%96%B0%E5%86%A0/">新冠</a><a class="post-meta__tags" href="/tags/%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6%E7%89%B9%E5%BE%81/">流行病学特征</a><a class="post-meta__tags" href="/tags/%E5%8F%91%E7%97%85%E7%8E%87/">发病率</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/04/12/%E4%B8%80%E7%BB%B4%E5%B0%8F%E4%B8%96%E7%95%8C%E7%BD%91%E7%BB%9C%E4%B8%AD%E9%95%BF%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AF%B9%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D/%E4%B8%80%E7%BB%B4%E5%B0%8F%E4%B8%96%E7%95%8C%E7%BD%91%E7%BB%9C%E4%B8%AD%E9%95%BF%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AF%B9%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D/" title="一维小世界网络中长程连接对信息传递效率的影响"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">一维小世界网络中长程连接对信息传递效率的影响</div></div><div class="info-2"><div class="info-item-1">关键词：小世界网络； python 摘要小世界网络（Small-World Network）是一种介于规则网络和随机网络之间的网络模型，具有高聚类系数和短平均路径长度的特性[1]。本文通过模拟一维小世界网络中的信息传递过程，研究了长程连接的概率分布参数α对信息传递效率的影响。我们使用贪心算法模拟了信息从源节点到目标节点的传递过程，并计算了不同α值下的平均传递步数T及其自然对数ln(T)。结果表明，随着α的增加，信息传递的效率显著降低，这与长程连接的稀疏性增加有关。本文的研究为理解小世界网络中的信息传递机制提供了新的视角。  1....</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Loria</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Scoups98"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is Loria's Blog. 背景图画手：微博@墙头儿儿</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">2.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-number">3.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E4%B8%8E%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">资料与方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%B5%84%E6%96%99%E6%9D%A5%E6%BA%90"><span class="toc-number">4.1.</span> <span class="toc-text">1. 资料来源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B5%84%E6%96%99%E6%94%B6%E9%9B%86%E6%96%B9%E6%B3%95"><span class="toc-number">4.2.</span> <span class="toc-text">2. 资料收集方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%88%86%E6%9E%90"><span class="toc-number">4.3.</span> <span class="toc-text">3. 统计学分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C"><span class="toc-number">5.</span> <span class="toc-text">结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%82%A3%E8%80%85%E4%B8%80%E8%88%AC%E6%83%85%E5%86%B5"><span class="toc-number">5.1.</span> <span class="toc-text">1. 患者一般情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%A1%80%E6%A0%93%E6%80%A7%E7%96%BE%E7%97%85%E5%8F%91%E7%97%85%E6%83%85%E5%86%B5"><span class="toc-number">5.2.</span> <span class="toc-text">2. 血栓性疾病发病情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="toc-number">5.3.</span> <span class="toc-text">3. 数据处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%A0%94%E7%A9%B6%E5%AF%B9%E8%B1%A1%E8%A1%80%E6%A0%93%E7%96%BE%E7%97%85%E5%8F%91%E7%97%85%E7%8E%87%E6%AF%94%E8%BE%83"><span class="toc-number">5.4.</span> <span class="toc-text">4. 研究对象血栓疾病发病率比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9B%BE%E5%83%8F%E6%95%B0%E6%8D%AE%E4%BF%A1%E6%81%AF%E5%88%86%E6%9E%90%E7%BB%93%E8%AE%BA"><span class="toc-number">5.5.</span> <span class="toc-text">5. 图像数据信息分析结论</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A8%E8%AE%BA"><span class="toc-number">6.</span> <span class="toc-text">讨论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-number">7.</span> <span class="toc-text">参考文献</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/12/%E4%B8%80%E7%BB%B4%E5%B0%8F%E4%B8%96%E7%95%8C%E7%BD%91%E7%BB%9C%E4%B8%AD%E9%95%BF%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AF%B9%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D/%E4%B8%80%E7%BB%B4%E5%B0%8F%E4%B8%96%E7%95%8C%E7%BD%91%E7%BB%9C%E4%B8%AD%E9%95%BF%E7%A8%8B%E8%BF%9E%E6%8E%A5%E5%AF%B9%E4%BF%A1%E6%81%AF%E4%BC%A0%E9%80%92%E6%95%88%E7%8E%87%E7%9A%84%E5%BD%B1%E5%93%8D/" title="一维小世界网络中长程连接对信息传递效率的影响">一维小世界网络中长程连接对信息传递效率的影响</a><time datetime="2025-04-12T06:44:00.000Z" title="Created 2025-04-12 14:44:00">2025-04-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/04/12/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B%E6%8A%A5%E5%91%8A/" title="生存分析报告：电信客户流失的驱动因素及预测">生存分析报告：电信客户流失的驱动因素及预测</a><time datetime="2025-04-12T06:44:00.000Z" title="Created 2025-04-12 14:44:00">2025-04-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/01/01/Thrombus-analysis/Thrombus-analysis/" title="深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析">深圳市某三甲医院急诊科就诊血栓患者人群新冠疫情相关流行病学特征分析</a><time datetime="2022-12-31T16:00:00.000Z" title="Created 2023-01-01 00:00:00">2023-01-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Loria</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
